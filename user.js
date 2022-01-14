@@ -85,11 +85,32 @@ function SendMessage(event){
         Time : now
     })
     .then(() => {
-        db.collection("parrot").where("message", "==", document.getElementById('Speak').value).get()
+        ParrotCheck();
+        //window.location.reload();
+    })
+}
+
+function ParrotCheck(){
+    db.collection("parrot").where("message", "==", document.getElementById('Speak').value).get()
         .then(doclist => {
             doclist.forEach(element => {
                 const mes = element.data();
                 var Parrot = `${mes.reply}`;
+                var date = new Date();
+                var month = date.getMonth() + 1;
+                var d = date.getDate();
+                var h = date.getHours();
+                var m = date.getMinutes();
+                var s = date.getSeconds();
+                if(h<10){
+                    h = '0' + h;
+                }
+                if(m<10){
+                    m = '0' + m;
+                }
+                if(s<10){
+                    s = '0' + s;
+                }
                 now = month + '月' + d + '日' + h + ':' + m + ":" + (s+1);
                 Chat.add({
                     name : "Happy Parrot",
@@ -101,8 +122,6 @@ function SendMessage(event){
                 })
             });
         })
-        
-    })
 }
 
 logoutButton.addEventListener('click', userlogout);

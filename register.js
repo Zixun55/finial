@@ -37,7 +37,7 @@ function Submit(event){
             Permission : "1"
         })
         .then(() => {
-            window.location.reload();
+            window.location.href='login.html';
         });
         alert("註冊成功");
         

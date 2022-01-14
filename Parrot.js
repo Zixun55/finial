@@ -71,24 +71,24 @@ function Teach(event){
     })
 }
 
-function Change(event){
-    event.preventDefault();
-    db.collection("parrot").where("message", "==", document.getElementById('say').value).get()
-        .then(doclist => {
-            doclist.forEach(element => {
-                const mes = element.data();
-                var Parrot = `${mes.message}`;
-                db.collection("parrot").doc("rn4EXhSmdCAmBR9BaSs8").set({
-                    message : Parrot,
-                    reply : document.getElementById("teach").value,
-                })
-                .then(() => {
-                    window.location.reload();
-                })
-            });
-        })
-}
+// function Change(event){
+//     event.preventDefault();
+//     db.collection("parrot").where("message", "==", document.getElementById('say').value).get()
+//         .then(doclist => {
+//             doclist.forEach(element => {
+//                 const mes = element.data();
+//                 var Parrot = `${mes.message}`;
+//                 db.collection("parrot").doc("rn4EXhSmdCAmBR9BaSs8").set({
+//                     message : Parrot,
+//                     reply : document.getElementById("teach").value,
+//                 })
+//                 .then(() => {
+//                     window.location.reload();
+//                 })
+//             });
+//         })
+// }
 
 logoutButton.addEventListener('click', userlogout);
 sendButton.addEventListener('click', Teach);
-changeButton.addEventListener('click', Change);
+// changeButton.addEventListener('click', Change);
