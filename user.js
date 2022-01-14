@@ -19,7 +19,7 @@ db.collection("logout").get()
         doclist.forEach(element => {
             const check = element.data();
             if (`${check.Login}` == '0'){
-                window.location.href='login.html';
+                window.location.href='index.html';
             }
             else if (`${check.Login}` == '1'){
                 window.location.href='admin.html';
@@ -57,7 +57,7 @@ function userlogout(event){
     })
     .then(() => {
         alert("登出成功!!")
-        window.location.href='login.html';
+        window.location.href='index.html';
     })
 }
 
