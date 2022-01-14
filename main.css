@@ -1,0 +1,40 @@
+  a{
+    margin: 20px;
+    color: #000000;
+  }
+
+  button{
+      background-color:#df5334;
+      border: 5px outset #e77e67;
+      color: ffffff;
+      border-radius: 8px;
+  }
+
+  div{
+    margin: 50px;
+    padding: 10px;
+    width: 350px;
+    height: 450px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-top: 10px solid #000080;
+    border-left: 10px solid #000080;
+    border-right: 10px solid #000080;
+    border-bottom: 10px solid #000080;
+    box-shadow: 0 0px 10px #1a1ae4;
+    
+    border-radius: 80px;
+    position:relative;   
+    margin: auto;
+    top: 100px;
+    text-align:center;  
+  }
+  
+  .system_name{
+    /*定位對齊*/
+    position:relative;   
+    margin: auto;
+    top: 100px;
+    text-align:center; 
+  }
+  
