@@ -56,7 +56,7 @@ function userlogout(event){
         User : "nobody"
     })
     .then(() => {
-        alert("登出成功!!")
+        alert("登出成功!!!")
         window.location.href='index.html';
     })
 }
